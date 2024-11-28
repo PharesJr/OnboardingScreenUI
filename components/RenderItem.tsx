@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   },
   itemText: {
     textAlign: "center",
-    fontSize: 44,
+    fontSize: 38,
     fontWeight: "bold",
     marginBottom: 10,
     marginHorizontal: 20,

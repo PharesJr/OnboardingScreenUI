@@ -19,7 +19,7 @@ import CustomButton from "@/components/CustomButton";
 //  We want to make this magical book even cooler by adding animations when you swipe!
 
 const index = () => {
-  const flatList = useAnimatedRef<FlatList<OnboardingData>>;
+  const flatListRef = useAnimatedRef<FlatList<OnboardingData>>();
 
   // 2. Tracking the Swipe (useSharedValue & useAnimatedScrollHandler):
 
@@ -56,6 +56,7 @@ const index = () => {
       scroll movements using something called onScroll. It tracks how far you’ve
       scrolled and saves this information in a variable (x). */}
       <Animated.FlatList
+        ref={flatListRef}
         data={data}
         renderItem={({ item, index }) => (
           <RenderItem item={item} index={index} x={x} />
@@ -74,9 +75,14 @@ const index = () => {
         }}
       />
 
-      <View className="absolute bottom-16 left-0 right-0 px-4 py-2">
+      <View className="absolute bottom-16 left-0 right-0 px-4 py-2 flex-row items-center justify-between">
         <Pagination data={data} x={x} />
-        <CustomButton />
+        <CustomButton
+          flatlistRef={flatListRef}
+          flatlistIndex={flatlistIndex}
+          dataLength={data.length}
+          x={x}
+        />
       </View>
 
       {/* 3. The Background: */}
