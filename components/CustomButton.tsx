@@ -1,9 +1,6 @@
 import {
-  View,
-  Text,
   FlatList,
   TouchableWithoutFeedback,
-  Image,
   useWindowDimensions,
 } from "react-native";
 import React from "react";

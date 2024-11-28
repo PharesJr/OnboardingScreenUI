@@ -8,8 +8,6 @@ import Animated, {
   SharedValue,
   useAnimatedStyle,
 } from "react-native-reanimated";
-import { transform } from "@babel/core";
-import { StatusBar } from "expo-status-bar";
 
 // Intro: The Page Code:
 // Each page of our magical book is brought to life with the help of the RenderItem.

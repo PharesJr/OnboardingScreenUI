@@ -1,5 +1,4 @@
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import Animated, {
   useAnimatedRef,
   useAnimatedScrollHandler,
@@ -8,7 +7,7 @@ import Animated, {
 import RenderItem from "@/components/RenderItem";
 import data, { OnboardingData } from "@/assets/data/data";
 import { StatusBar } from "expo-status-bar";
-import { FlatList, Text, View, ViewToken } from "react-native";
+import { FlatList, View, ViewToken } from "react-native";
 import Pagination from "@/components/Pagination";
 import CustomButton from "@/components/CustomButton";
 
@@ -47,7 +46,7 @@ const index = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1">
+    <>
       {/* 1. THE BOOK (FlatList) */}
       {/* This is the main thing holding all the pages (called
       data). We use a list called Animated.FlatList to create our magical
@@ -90,7 +89,7 @@ const index = () => {
       {/* There’s a StatusBar at the top, and we make it see-through (transparent) 
       so the colors on each page show through beautifully. */}
       <StatusBar backgroundColor="transparent" translucent style="dark" />
-    </SafeAreaView>
+    </>
   );
 };
 

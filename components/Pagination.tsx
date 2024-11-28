@@ -1,8 +1,7 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import { OnboardingData } from "@/assets/data/data";
 import { SharedValue } from "react-native-reanimated";
-import index from "@/app";
 import Dot from "./Dot";
 
 const Pagination = ({
